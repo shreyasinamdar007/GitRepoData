@@ -1,0 +1,95 @@
+{ users.map((user) => (
+    <div style={{display: "flex", justifyContent: "center", alignItems:"center", textAlign:"center", border: "1rem", borderColor:"cadetblue", margin: "auto", padding: "10px", backgroundImage: "lightblue"}}>
+    <Card width = "800px" style = {{ }}>
+    <Card.Body style={{ display: "flex", flexDirection: "column", margin: "auto", padding:"auto" }}>
+    <Col style={{ }} xs={2} md={4}>
+      <Image src = {img} width="100px" roundedCircle />
+      </Col>
+       <Card.Title style={{ fontSize: "1.5rem" , display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>UserLoginName: {user.login} </Card.Title>
+       <Card.Text style={{ fontSize: "1.2rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>ID: {user.id}</Card.Text>
+       <Card.Text style={{ fontSize: "1.2rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Profile URL: <a href = {user.html_url}> {user.html_url} </a></Card.Text>
+       <Card.Text style={{ fontSize: "1.2rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Repository URL: <a href = {user.repos_url}> {user.repos_url} </a></Card.Text>
+       <Card.Text style={{ fontSize: "1.2rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>User Type: {user.type}</Card.Text>
+       <Card.Text style={{ fontSize: "1.2rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Score: {user.score}</Card.Text>
+       <button type="button" class="btn btn-info" onClick={toggleIs}>Details</button> 
+     </Card.Body>
+     </Card>
+    </div>
+  )    
+
+  )} 
+
+  (sort1 === "Ascending") ? (users.map((user, index) => (  
+      <div style={{display: "flex", justifyContent: "center", alignItems:"center", textAlign:"center", border: "1rem", borderColor:"cadetblue", margin: "auto", padding: "10px", backgroundImage: "lightblue"}}>
+     <Card width = "800px" style = {{ }}>
+     <Card.Body data-id={index} style={{ display: "flex", flexDirection: "column", margin: "auto", padding:"auto" }}>
+     <Col style={{ }} xs={2} md={4}>
+       <Image src = {img} width="80px" roundedCircle />
+       </Col>
+        <Card.Title style={{ fontSize: "1.3rem" , display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>UserLoginName: {user.login} </Card.Title>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>ID: {user.id}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Profile URL: <a href = {user.html_url}> {user.html_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Repository URL: <a href = {user.repos_url}> {user.repos_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>User Type: {user.type}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Score: {user.score}</Card.Text>
+        <button type="button" class="btn btn-info" onClick={GrabEle}>Details</button> 
+      </Card.Body>
+      </Card>
+     </div>
+     ))).sort((a, b) => a.score - b.score) : (users.map((user, index) => (  
+      <div style={{display: "flex", justifyContent: "center", alignItems:"center", textAlign:"center", border: "1rem", borderColor:"cadetblue", margin: "auto", padding: "10px", backgroundImage: "lightblue"}}>
+     <Card width = "800px" style = {{ }}>
+     <Card.Body data-id={index} style={{ display: "flex", flexDirection: "column", margin: "auto", padding:"auto" }}>
+     <Col style={{ }} xs={2} md={4}>
+       <Image src = {img} width="80px" roundedCircle />
+       </Col>
+        <Card.Title style={{ fontSize: "1.3rem" , display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>UserLoginName: {user.login} </Card.Title>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>ID: {user.id}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Profile URL: <a href = {user.html_url}> {user.html_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Repository URL: <a href = {user.repos_url}> {user.repos_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>User Type: {user.type}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Score: {user.score}</Card.Text>
+        <button type="button" class="btn btn-info" onClick={GrabEle}>Details</button> 
+      </Card.Body>
+      </Card>
+     </div>
+     )))
+
+
+     ///Sorting
+
+     : (sort1 === "Descending") ? (users.map((user, index) => (  
+      <div style={{display: "flex", justifyContent: "center", alignItems:"center", textAlign:"center", border: "1rem", borderColor:"cadetblue", margin: "auto", padding: "10px", backgroundImage: "lightblue"}}>
+     <Card width = "800px" style = {{ }}>
+     <Card.Body data-id={index} style={{ display: "flex", flexDirection: "column", margin: "auto", padding:"auto" }}>
+     <Col style={{ }} xs={2} md={4}>
+       <Image src = {img} width="80px" roundedCircle />
+       </Col>
+        <Card.Title style={{ fontSize: "1.3rem" , display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>UserLoginName: {user.login} </Card.Title>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>ID: {user.id}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Profile URL: <a href = {user.html_url}> {user.html_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Repository URL: <a href = {user.repos_url}> {user.repos_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>User Type: {user.type}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Score: {user.score}</Card.Text>
+        <button type="button" class="btn btn-info" onClick={GrabEle}>Details</button> 
+      </Card.Body>
+      </Card>
+     </div>
+     ))).sort((a , b) => b.id - a.id) : (sort1 === "Ascending") ? (users.map((user, index) => (  
+      <div style={{display: "flex", justifyContent: "center", alignItems:"center", textAlign:"center", border: "1rem", borderColor:"cadetblue", margin: "auto", padding: "10px", backgroundImage: "lightblue"}}>
+     <Card width = "800px" style = {{ }}>
+     <Card.Body data-id={index} style={{ display: "flex", flexDirection: "column", margin: "auto", padding:"auto" }}>
+     <Col style={{ }} xs={2} md={4}>
+       <Image src = {img} width="80px" roundedCircle />
+       </Col>
+        <Card.Title style={{ fontSize: "1.3rem" , display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>UserLoginName: {user.login} </Card.Title>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>ID: {user.id}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Profile URL: <a href = {user.html_url}> {user.html_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Repository URL: <a href = {user.repos_url}> {user.repos_url} </a></Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>User Type: {user.type}</Card.Text>
+        <Card.Text style={{ fontSize: "1rem", display:"flex", justifyContent: "center", alignItems: "center", margin: "auto", padding:"auto"}}>Score: {user.score}</Card.Text>
+        <button type="button" class="btn btn-info" onClick={GrabEle}>Details</button> 
+      </Card.Body>
+      </Card>
+     </div>
+     ))).sort((a, b) => a.id - b.id)
