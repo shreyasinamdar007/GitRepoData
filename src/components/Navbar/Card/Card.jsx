@@ -9,7 +9,7 @@ const Card = ({ imageLink, description, stars, repoName, language }) => {
         <div className={style.cardContainer}>
             <div className={style.avatar}>
                 <div className={style.img}>
-                    <img src={imageLink} className={style.imgName} />
+                    <img src={imageLink} className={style.imgName} alt="avatar" />
                 </div>
             </div>
             <div className={style.content}>

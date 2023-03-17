@@ -58,6 +58,7 @@
                 color: white;
                 border: 0px;
                 width: 22%;
+                text-align: center;
                 padding: 6px;
                 height: 36px;
                 border-radius: 6px;
@@ -77,4 +78,40 @@
     }
 
     // flex-wrap: wrap;
+}
+
+
+@media only screen and (max-device-width: 767px) {
+
+    .container {  
+        width: 100%;      
+        .inputContainer {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .filterSelect {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                margin-top: 20px;
+
+                label {
+                    width: 80%;
+                }
+            }
+
+            .input {
+                width: 100%;
+            }
+        }
+        .innerContainer {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+        }
+    }
+
+
 }

@@ -10,7 +10,6 @@ const Users = () => {
     const [items, setItems] = useState([]);
     const [search, setSearch] = useState();
     const [sortingOption, setSortingOption] = useState();
-    const [user, setUser] = useState();
     const [loading, setLoading] = useState();
 
     const fetchRepos = async () => {
@@ -73,34 +72,34 @@ const Users = () => {
 
     const handleSort = (event) => {
         setSortingOption(event.target.value);
-        if (event.target.value == "stars") {
+        if (event.target.value === "stars") {
             const sortedItems = items.sort((a, b) => b.stargazers_count - a.stargazers_count);
             setItems(sortedItems);
         }
 
-        if (event.target.value == "watcherCount") {
+        if (event.target.value === "watcherCount") {
             const sortedItems = items.sort((a, b) => b.watchers_count - a.watchers_count);
             setItems(sortedItems);
         }
 
-        if (event.target.value == "createdAt") {
+        if (event.target.value === "createdAt") {
             console.log("kaskaskf")
             const sortedItems = items.sort((a, b) => moment(b.created_at) - moment(a.created_at))
             setItems(sortedItems);
         }
 
-        if (event.target.value == "updatedAt") {
+        if (event.target.value === "updatedAt") {
             console.log("kaskaskf")
             const sortedItems = items.sort((a, b) => moment(b.updated_at) - moment(a.updated_at))
             setItems(sortedItems);
         }
 
-        if (event.target.value == "name") {
+        if (event.target.value === "name") {
             const sortedItems = items.sort((a, b) => a.name > b.name ? 1 : -1);
             setItems(sortedItems);
         }
 
-        if (event.target.value == "score") {
+        if (event.target.value === "score") {
             const sortedItems = items.sort((a, b) => b.forks_count - a.forks_count);
             setItems(sortedItems);
         }
