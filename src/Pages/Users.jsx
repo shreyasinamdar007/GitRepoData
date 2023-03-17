@@ -83,13 +83,11 @@ const Users = () => {
         }
 
         if (event.target.value === "createdAt") {
-            console.log("kaskaskf")
             const sortedItems = items.sort((a, b) => moment(b.created_at) - moment(a.created_at))
             setItems(sortedItems);
         }
 
         if (event.target.value === "updatedAt") {
-            console.log("kaskaskf")
             const sortedItems = items.sort((a, b) => moment(b.updated_at) - moment(a.updated_at))
             setItems(sortedItems);
         }
@@ -106,13 +104,11 @@ const Users = () => {
     }
 
 
-    console.log("sortingOptions", sortingOption)
-
     return (<>
         <div className={style.container}>
             <div className={style.inputContainer}>
                 <div className={style.input}>
-                    <input placeholder='Enter repository name' className={style.inputField} onChange={handleChange} value={search} />
+                    <input placeholder='Enter git username here' className={style.inputField} onChange={handleChange} value={search} />
                     <button onClick={handleSubmit} className={style.customButton}>Search</button>
                 </div>
                 <div className={style.filterSelect}>

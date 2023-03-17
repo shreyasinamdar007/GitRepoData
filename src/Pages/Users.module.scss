@@ -63,6 +63,11 @@
                 height: 36px;
                 border-radius: 6px;
                 outline: none;
+                cursor: pointer;
+            }
+
+            .customButton:hover {
+                background-color: rgb(54, 154, 51);
             }
         }
     }
