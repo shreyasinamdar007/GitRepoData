@@ -1,12 +1,16 @@
 import { React, useState, useEffect } from "react";
 import "./App.css";
-import Navigate from "./components/Navbar/Navbar";
-import { Card } from "react-bootstrap";
+import Users from "./Pages/Users";
+import style from './App.module.scss'
 
 function App() {
   return (
-    <div className="App">
-      <Navigate />
+    <div>
+      <section>
+      <div className={style.users}>
+        <Users />
+        </div>
+      </section>
     </div>
   );
 }
