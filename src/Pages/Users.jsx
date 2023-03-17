@@ -93,7 +93,7 @@ const Users = () => {
         }
 
         if (event.target.value === "name") {
-            const sortedItems = items.sort((a, b) => a.name > b.name ? 1 : -1);
+            const sortedItems = items.sort((a, b) => a.name.localeCompare(b.name));
             setItems(sortedItems);
         }
 
